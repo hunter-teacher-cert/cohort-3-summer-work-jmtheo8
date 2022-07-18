@@ -1,3 +1,6 @@
+//Collaborators: Will, Jerusha, Thea, Maxwell
+
+
 import java.io.*;
 import java.util.*;
 
@@ -31,12 +34,12 @@ Challenge
 remove(int index);
 */
 
-public class LinkedList{
+public class linkedList{
 
   private Node head;
 
   /* Constructor */
-  public LinkedList()
+  public linkedList()
   {
     head = null;
   }

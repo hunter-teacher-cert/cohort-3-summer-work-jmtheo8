@@ -11,45 +11,46 @@ public class Node{
 
   /* Constructors */
 
-  public Node(){
+    public Node(){
 
-  }
+    }
 
-  public Node(String data){
-    this.data = data;
-    this.next = null;
+      public Node(String data){
+        this.data = data;
+        this.next = null;
 
-  }
+      }
 
 
-  public Node(String data, Node next){
-    this.data = data;
-    this.next = next;
-  }
+        public node(String data, Node next){
+          
+          this.data = data;
+          this.next = next;
+        }
 
-  // Getters
+          // Getters
   
-  public String getData(){
-    return data;
-  }
-  public Node getNext(){
-    return next;
-  }
+            public String getData(){
+            return data;
+            }
+            public Node getNext(){
+            return next;
+            }
 
-  // Setters
+          // Setters
   
-  public void setData(String data){
-    this.data = data;
-  }
-    
-    public void setNext(Node next){
-	this.next = next;
-  }
+            public void setData(String data){
+            this.data = data;
+            }      
+            public void setNext(Node next){
+	          this.next = next;
+            }
 
   
-  // toString
+      // toString
   
-  public String toString(){
-    return "" + data + "->";
-  }
+        public String toString(){
+        //use the toString() method to get the string representation of an object.
+        return "" + data + "->";
+        }        
 }

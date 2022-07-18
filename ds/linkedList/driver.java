@@ -8,10 +8,12 @@ Collaborators: Maxwell Y, Will L, Jerusha T
 **/
 
 public class Driver{
-  public static void main(String[] args) {
+  
+  public static void main(String[] args){
+    
     LinkedList l = new LinkedList();
     
-    System.out.println(l);
+    System.out.println("Adding letters to the Linked Lsit");
     // testing add
     l.add("D");
     l.add("C");
@@ -20,8 +22,9 @@ public class Driver{
 
     // testing get
     System.out.println(l.get(0));
-    System.out.println(l.get(1));
-    System.out.println(l.get(2));
-    System.out.println(l.get(3));
+    // System.out.println(l.get(1));
+    // System.out.println(l.get(2));
+    // System.out.println(l.get(3));
+    Systerm.out.println("Node value at index 0" + "=" + l.get(0));
   }
 }
