@@ -44,13 +44,14 @@ public class Rational
   // overloaded constructor
   // takes 2 parameters, one for the numerator, one for the denominator
   // if an invalid denominator is attempted, should print a message and set the number to 0/1
-  public Rational( int n, int d )
+  public Rational(int n, int d)
   {
     /* YOUR ELEGANT CODE HERE */
     _numerator = n;
     _denominator = d;
-    if(_denominator ==0) {
-      System.out.println ("invalid");
+    
+    if(_denominator == 0){
+      System.out.println("invalid");
         _denominator = 1;
         _numerator = 0;
     }
@@ -60,21 +61,23 @@ public class Rational
 
   // toString
   // returns a string representation of the rational number (formatting of your choice)
-  public String toString()
-  {
+    public String toString()
+    {
     /* YOUR ELEGANT CODE HERE */
-    return this._numerator + "/" + this._denominator;
-  }
+      return this._numerator + "/" + this._denominator;
+      
+    }
 
 
   // floatValue
   // returns floating point approximation of the number
   // uses the most precise floating point primitive
-  public double floatValue()
-  {
+      public double floatValue()
+      {
   //   /* YOUR ELEGANT CODE HERE */
-    return (double) _numerator/_denominator;
-  }
+        return (double) _numerator/_denominator;
+        
+      }
 
 
   // // multiply
@@ -83,28 +86,29 @@ public class Rational
   // // modifies this object
   // // does not modify input
   // // need not reduce
-  public void multiply( Rational r )
-  {
+        public void multiply( Rational r )
+        {   
+          
     /* YOUR ELEGANT CODE HERE */
-   _numerator *= r._numerator;
-   _denominator *= r._denominator;
-    
-  }
+         _numerator *= r._numerator;
+         _denominator *= r._denominator;
+
+        }
 
 
   // divide
   // same as multiply, except operation is division
-  public void divide( Rational r )
+  public void divide(Rational r)
   {
     /* YOUR ELEGANT CODE HERE */
     if (r._numerator !=0){
       _numerator *= r._denominator;
-    _denominator *= r._numerator;
-    } else {
-      System.out.println("Invalid");
-    }
-  
-  
+      _denominator *= r._numerator; 
+    } 
+      else {
+        System.out.println("Invalid");
+      }
+
   }
 
 }//end class

@@ -41,31 +41,42 @@ import java.util.*;
 
 public class Array2DPractice
 {
+  
   public static char[][] buildBoard( int rows, int cols, char value )
   {
     char[][] board = new char[rows][cols];
-    for (int i = 0; i < rows; i++) {
-      for (int j = 0; j < cols; j++) {
+    for (int i = 0; i < rows; i++){
+      for (int j = 0; j < cols; j++){
+        
         board[i][j]=value;
       }
     }
+   
     return board;
+   
   }
 
   /**
      pretty prints a 2D array of characters
      This should print the array as a grid
   */
-  public static void printBoard( char[][] board )
-  {
-    for (int r = 0; r < board.length; r++){
-      for (int c = 0; c < board[r].length; c++){
-        System.out.print(board[r][c]);
-        }
+    public static void printBoard(char[][] board)
+    {
       System.out.println();
-    }
     
-  }
+      
+      for(int r = 0; r < board.length; r++){
+      
+        for(int c = 0; c < board[r].length; c++){
+        
+          System.out.print(board[r][c]);
+      
+        }
+        
+        System.out.println();
+      }
+    
+    }
 
   /**
      Parameters:
@@ -87,10 +98,10 @@ public class Array2DPractice
      @@@@
      xxxx
   */
-  public static void setRow( char[][] board, int row, char value )
-  {
+    public static void setRow(char[][] board, int row, char value)
+    {
     /* YOUR AWESOME CODE HERE */
-  }
+    }
 
 
   /**
@@ -98,17 +109,22 @@ public class Array2DPractice
      original and copies all the elements
   */
   // This only works for non-jagged arrays
-  public static char[][] copyBoard( char[][] original )
+  public static char[][] copyBoard(char[][] original)
   {   
-    System.out.println("Copying board...");
-    char[][] food = new char [original.length][original[0].length];
+    System.out.println();
+    
+    
+    char[][] boardCopy = new char [original.length][original[0].length];
 
-    for (int r = 0; r < food.length; r++){
-      for (int c = 0; c<food[r].length; c++){
-        food [r][c] = original[r][c];
+      for (int r = 0; r < boardCopy.length; r++){
+        
+        for (int c = 0; c<boardCopy[r].length; c++){
+        
+          boardCopy [r][c] = original[r][c];
+        }
       }
-    }
-    return food;
+    
+        return boardCopy;
   }
 
 
@@ -144,18 +160,27 @@ public class Array2DPractice
   */
   public static void explodeSquare( char[][] board, int row, int col )
   {
-    System.out.println("Exploding Square...");
-    char temp = board[row][col];
-    for (int r = row-1; r <= row + 1; r++){
-      for (int c = col-1; c <= col + 1; c++){
-        if ( 0 <= r && r < board.length){
-          if (0 <= c && c < board[0].length){
-            board[r][c] = 'X';
+    System.out.println();
+    System.out.println();
+    
+    System.out.println("PRINT NEW BOARD:");
+    
+      char temp = board[row][col];
+    
+        for(int r = row-1; r <= row + 1; r++){
+          
+          for(int c = col-1; c <= col + 1; c++){
+            
+            if(0 <= r && r < board.length){
+                
+              if(0 <= c && c < board[0].length){
+                
+                  board[r][c] = 'X';
+              }
+            }
           }
         }
-      }
-    }
-    board[row][col] = temp;
+        board[row][col] = temp;
   }
 
 /**
@@ -190,27 +215,37 @@ public class Array2DPractice
   */
   public static void explodeAllChar(char[][] board, char d)
   {
-    System.out.println("Exploding All the Squares...!!!");
+    System.out.println();
+    
+    System.out.println("EXPLODE ALL SQUARES:");
 
-    for (int r = 0; r<board.length; r++){
-      for (int c = 0; c<board[r].length; c++){
-        if (board[r][c] == d){
-          char temp = board[r][c];
-          for (int row = -1; row <= 1; row++){
-            for (int col = -1; col <= 1; col++){
-              if ( 0 <= r + row && r + row < board.length){
-                if (0 <= c + col && c + col < board[0].length){
-                  if (board[r+row][c+col] == 'a'){
-                    board[r + row][c + col] = 'c';
+     for(int r = 0; r<board.length; r++){
+      
+      for(int c = 0; c<board[r].length; c++){
+        
+        if(board[r][c] == d){
+          
+            char temp = board[r][c];
+          
+            for(int row = -1; row <= 1; row++){
+            
+              for(int col = -1; col <= 1; col++){
+              
+                if(0 <= r + row && r + row < board.length){
+                
+                  if(0 <= c + col && c + col < board[0].length){
+                  
+                    if (board[r+row][c+col] == 'a'){
+                      board[r + row][c + col] = 'c';
+                    }  
                   }
                 }
-              }
+              }   
             }
+            board[r][c] = temp;
           }
-          board[r][c] = temp;
         }
       }
-    }
   }
 
 
@@ -251,9 +286,11 @@ public class Array2DPractice
   */
   public static void downString( char[][] board, int row, int col, String word )
   {
+    
+    System.out.println();
     System.out.println("DOWN STRING:");
-    for (int m = 0; m < word.length(); m++){
-      if (row + m <= board.length-1){
+    for(int m = 0; m < word.length(); m++){
+      if(row + m <= board.length-1){
         System.out.println(row + m);
         board[row+m][col] = word.charAt(m);
       } 
@@ -261,7 +298,7 @@ public class Array2DPractice
   }
 
 
-  public static void main( String[] args )
+  public static void main(String[] args)
   {
     char[][] b = buildBoard(7,8,'z');
     char[][] a = buildBoard(7,7,'a');
@@ -270,21 +307,20 @@ public class Array2DPractice
     printBoard(b);
     char [][] mood = copyBoard(b);
     printBoard(mood);
+    
     // explodeSquare(b, 4, 4);
-    System.out.println("Print out a new board:");
+    System.out.println();
+    System.out.println("PRINT NEW BOARD:");
     printBoard(a);
     explodeAllChar(a, 'b');
     printBoard(a);
-    System.out.println("FRESH BOARD:");
+    System.out.println();
+    System.out.println("NEW BOARD:");
     printBoard(b);
-    downString(b, 0, 3, "horseshoes");
-    downString(b, 4, 5, "goodbye");
+    downString(b, 1, 2, "HELLO");
+    downString(b, 3, 5, "WORLD");
     printBoard(b);
-    /*
-      Note, you can directly set elements in the board
-      using array notation like b[3][2]='z' and you
-      can use array notation to also access individual
-      elements
-    */
+    System.out.println();
+
   }
 }
