@@ -20,7 +20,7 @@ public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Inte
 */
 
 
-public class alPractice{
+public class AlPractice{
 
 //   /**
 //   Parameters:
@@ -38,6 +38,7 @@ public class alPractice{
     Random r = new Random();
 	
       ArrayList<Integer> randomArray = new ArrayList<Integer>(size);
+    
 	      for(int i=0; i<size; i++){
         
   	      randomArray.add(r.nextInt(maxval));
@@ -58,7 +59,7 @@ public class alPractice{
 // 	      for(int i = 0; i<dataList.size(); i++){
   	
 //         sum += dataList.get(i);
-          
+          // method is called 
 // 	      }
       
 // 	      return sum;
@@ -80,14 +81,14 @@ public class alPractice{
 //     public static void swapElements(ArrayList<Integer> dataList, int index1, int index2){
 	
 //       int tempIndex1 = dataList.get(index1);
-	    
+	    // varaible is intilized
 //       int tempIndex2 = dataList.get(index2);
-	
+	// varaible is intilized
 //         dataList.set(index1, tempIndex2);
-	
+	// Value of index 1 ia replaced with value of index 2
 //         dataList.set(index2, tempIndex1);
 //   }
-
+	// Value of index 2 ia replaced with value of index 1
 // // //   /**
 // // //   Parameters:
 // // //   - dataList - an AraryList of Integers
@@ -153,40 +154,22 @@ public class alPractice{
 //   Postconditions:
 //   - The parameter ArrayLists should not be modified.
 //   */
-    public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA, ArrayList<Integer>ListB){
-      
-	    int totalSize = ListA.size() + ListB.size();
-      
-	    ArrayList<Integer> zip = new ArrayList<Integer>(totalSize);
-      
-	    int i = 0;
-      
-	      while (i < ListA.size() && i < ListB.size()){
-  	
-          zip.add(ListA.get(i));
-  	
-          zip.add(ListB.get(i));
-  	
-            i++;
-	      }
-
-	        while (i < ListA.size() && i>=ListB.size()){
-  	
-            zip.add(ListA.get(i));
-  	
-              i++;
-	        }
-
-	          while (i < ListB.size() && i>=ListA.size()){
-  	  
-            zip.add(ListB.get(i));
-  	        
-              i++;
-	          }
-    
-	            return zip;
-      
+  
+  public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
+    ArrayList<Integer> zipLists = new ArrayList<Integer>();
+    for(int i = 0; i < ListA.size() && i< ListB.size(); i++){
+      if (i < ListA.size()){
+        zipLists.add(ListA.get(i));
+      }
+      if(i < ListB.size()){
+        zipLists.add(ListB.get(i));
+      }
     }
+    return zipLists;//placeholder to compile.
+  }
+
+
+
 
 
 
@@ -232,7 +215,7 @@ public class alPractice{
 
 	System.out.println("");
 	System.out.println("ZIP LISTS:");
-	test zipLists;
+	//test zipLists;
 	ArrayList<Integer> C = buildRandomList(3, 20);
 	ArrayList<Integer> D = buildRandomList(6, 20);
 	System.out.println("Zip " + C + " and " + D);

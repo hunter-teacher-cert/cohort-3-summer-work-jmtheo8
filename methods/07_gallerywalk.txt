@@ -1,0 +1,45 @@
+YOUR MISSION (20min):
+eachpersonTASK: Copy 07_gallerywalk.txt into your methods folder.
+GOAL: Pick up tips & tricks from each other via a...links to any sites you think deserve a bigger stage, and we will all have a look!
+
+
+TIPS AND TRICKS
+
+
+DELIVERABLE: 07_gallerywalk.txt in your methods folder, filled in according .
+
+SlackerTASK: 
+for...https://raw.githubusercontent.com/hunter-teacher-cert/sedc71900-summer-2022/main/resources/ghpages/07_gallerywalk.txt (edited) 
+
+First Last
+Methods Summer 2022
+GALLERY TOUR LOG
+
+
+USAGE OF TOP SECTION: 
+* Fill in discoveries etc section as you go, or after your is complete.
+* Replicate the 
+* Delete these instructions once read.
+====================================================
+DISCOVERIES:
+* any cool tips/tricks/hacks you learned
+* 1 per line, please
+
+
+LINGERING QUESTIONS:
+* 1 per line, please
+
+
+COMMENTS/CONCERNS/OTHER:
+* 1 per line, please
+====================================================
+
+
+USAGE OF BOTTOM SECTION: 
+* For any site you deem notable, add an entry using the format below
+====================================================
+notable site:
+URL
+notable aspect:
+what is cool about this site
+-------------------------------------

@@ -1,3 +1,53 @@
-* Methods for teaching Computer Science
+ommunity Building Techniques
 
-Place all assignments for the Methods class in this folder as directed by the course instructors.
+written with collaborative input from Team hashtagBEGUDFAM
+
+Roster: First Last, First Last, First Last
+
+Target Environment: School|Classroom
+
+Classroom Attributes:
+
+course: COURSE YOU TEACH
+grade level: GRADE LEVEL OF STUDENTS IN THIS COURSE
+prior run count: NUMBER OF TIMES YOU HAVE TAUGHT THIS COURSE BEFORE
+OR
+
+School Attributes:
+
+school size: APPROXIMATE NUMBER OF STUDENTS
+school grade range: LO-HI
+faculty count: NUMBER OF FULL-TIME CS TEACHERS
+courses: LIST OF CS COURSES YOUR SCHOOL OFFERS
+Activity|ClassRoutine|Club|Organization|Initiative|System: NAMEOFTHING
+
+How It Works
+
+Blah blah...
+
+detail
+specific
+etc
+more prose...
+
+ordered
+list
+of steps...
+Expected Positive Outcomes
+
+This is attractive because...
+
+reason
+thing
+other thing
+Rollout Timeline
+
+How long should this take to implement, come to fruition...
+Significant milestones along the way?
+Mechanism for Gauging Efficacy
+
+How will you know it is working?
+
+Expected Hurdles and Plans to Overcome
+
+( if any... )

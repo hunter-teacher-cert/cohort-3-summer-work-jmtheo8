@@ -1,4 +1,4 @@
-D//Collaborators: Will, Jerusha Thea and 
+//Collaborators: Will, Jerusha Thea and Max
 
 import java.io.*;
 import java.util.*;
@@ -12,7 +12,8 @@ public class Driver{
 	// the code by hand until the comment
 	// that says stop tracing
 
-	  Node front;
+	  Node = front;
+    
 	  front = new Node("one");
     
 	  front.setNext(new Node("two"));
@@ -22,18 +23,19 @@ public class Driver{
 	  front.getNext().getNext().setNext(new Node("four"));
 
     System.out.println(front.getData());
-
+    
 	 
       Node walker;
-      
-	      walker = front;
+      walker = front;
+    
 	      System.out.println(front.getData());
     
 	      walker = walker.getNext();
     
 	      System.out.println(walker.getData());
 	      System.out.println(front.getNext().getData());
-
+ 
+  
 	// stop tracing
 
 	// Now, compile and run the program
@@ -44,30 +46,28 @@ public class Driver{
 	// complete the program as per the following comments
 	// and compile and run your program again.
 
-	// Add a line to set the walker variable defined above
+  // Add a line to set the walker variable defined above
 	// so that it points to (refers to) the same node as
 	// the variable front points to. 
-    
-        walker == front);
-	
+	walker = front;
 	// Uncomment the next line, compile and run
 	// to test what you just added
-    
-	      System.out.println(walker.getData());
+  System.out.println(walker.getData());
 
 	// Add the code necessary
+  // Add the code necessary
+	// to set up a loop that
+	// 1. Prints out what is in walker.data()
+	// 2. Moves walker to point to the next node
+	// 3. Loops until walker gets to null
     
-        while(walker != null){
-	      // to set up a loop that    
-        }
-  
-           System.out.println(walker.getData());
-	    // 1. prints out what is in walker.data()
-  
-           walker = walker.getNext();
-	    // 2. moves walker to point to the next node
-       //&  
-	    // 3. loops until walker gets to null
-	
+    while(walker.getNext() != null){ 
+      System.out.println(walker.getData());
+    
+        walker = walker.getNext();
     }
+    
+          System.out.println(walker.getData());
+
+  }
 }
